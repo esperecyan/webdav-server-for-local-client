@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+    webdav:
+        build:
+            context: webdav-server-for-local-client
+            args:
+                path: ${URL_PATH}
+                methods: ${METHODS}
+        ports:
+            - ${PORT}:80
+        networks:
+            - container-link
+        volumes:
+            - ${ROOT_PATH}:/usr/local/apache2/uploads
+        restart: always
+
+networks:
+    default:
+        name: ${COMPOSE_PROJECT_NAME}
+    container-link:
+        name: ${COMPOSE_PROJECT_NAME}-network
