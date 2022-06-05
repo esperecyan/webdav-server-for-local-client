@@ -12,6 +12,7 @@ Usage
 1. Copy `.env.example` as `.env`.
 1.
 	- To allow the client to write to the folder, set `PROPFIND GET MKCOL PUT DELETE` to `METHOD`.
+	- To allow `depth: Infinity` (all files and directories, including subdirectories under the specified directory, to be retrieved at once), set `DEPTH_INFINITY` to `On`.
 	- Set `PORT` to any integer between 49152 and 65535.
 	- Set `URL_PATH` to a random alphanumeric string beginning with `/`. (to prevent access from clients other than the intended client)
 	- Set `ROOT_PATH` to the folder path to read/write to.
