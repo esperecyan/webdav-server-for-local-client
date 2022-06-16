@@ -22,6 +22,15 @@ Usage
 
 [Docker Desktop]: https://www.docker.com/get-started/
 
+### Additional Configurations
+You can have Apache include additional configuration files by having Docker mount the `/usr/local/apache2/conf.d` directory as follows:
+
+```yaml
+        volumes:
+		    - ${ROOT_PATH}:/usr/local/apache2/uploads
+            - ./conf.d:/usr/local/apache2/conf.d
+```
+
 Licence
 -------
 Licensed under the [Mozilla Public License Version 2.0] \(MPL-2.0).
