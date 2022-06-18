@@ -27,7 +27,7 @@ You can have Apache include additional configuration files by having Docker moun
 
 ```yaml
         volumes:
-		    - ${ROOT_PATH}:/usr/local/apache2/uploads
+            - ${ROOT_PATH}:/usr/local/apache2/uploads
             - ./conf.d:/usr/local/apache2/conf.d
 ```
 
