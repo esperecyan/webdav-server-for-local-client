@@ -10,4 +10,4 @@ RUN sed --in-place --regexp-extended "s#(Alias )[^ ]+#\\1$path#; s/^( +)Dav On\$
 # Grant write permission from Apache to the lock file destination.
 WORKDIR /usr/local/apache2
 RUN [ "mkdir", "var" ]
-RUN [ "chown", "daemon", "var" ]
+RUN [ "chown", "www-data", "var" ]
